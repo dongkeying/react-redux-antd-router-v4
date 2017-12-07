@@ -1,0 +1,118 @@
+.class-wrap {
+    @include flex();
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    background: rgba(0,0,0,.04);
+    >img{
+        width: 100%;
+        height: 2rem;
+    }
+    // 公共样式
+    .item-class2{
+        width: 100%;
+        padding:.15rem;
+        @include clearfix();
+        li{
+            float: left;
+            width: 50%;
+            padding:.05rem;
+            margin-bottom: .1rem;
+            img{
+                width: 100%;
+                height: 1.08rem;
+            }
+            .bottom{
+                .title2{
+                    font-size: .16rem;
+                    font-weight: bold;
+                    color: #000;
+                    @include ellipsis();
+                    height: .25rem;
+                    line-height: .26rem;
+                }
+                .quick{
+                    font-size: .14rem;
+                    position: relative;
+                    // &::after{
+                    //     content:"";
+                    //     width: .2rem;
+                    //     height: .04rem;
+                    //     background: $base-color;
+                    //     position: absolute;
+                    //     bottom:-0.04rem;
+                    //     left: 0;
+                    // }
+                }
+            }
+        }
+    }
+    .hot-class,
+    .body-class {
+        background: #fff;
+    }
+    .hot-class{
+        .head{
+            height: .45rem;
+            @include flexbox();
+            padding:.2rem;
+            margin-bottom: .1rem;
+            .ico{
+                width:.44rem;
+                height: .44rem;
+                border-radius: 50%;
+                line-height: .44rem;
+                text-align: center;
+                display: inline-block;
+                background: $base-color;
+                .iconfont{
+                    font-size: .26rem;
+                }
+            }
+            .font{
+                @include flex();
+                margin-left: .1rem;
+                h4{
+                    font-size: .17rem;
+                    font-weight: bold;
+                }
+                p{
+                    font-size: .13rem;
+                    color:#666;
+                }
+            }
+        }
+    }
+    .body-class{
+        margin-top:.1rem;
+        ul{
+            padding-top:0;
+        }
+        .bot{
+            .del{
+                text-decoration: line-through;
+                font-size: .12rem;
+            }
+            .min-price{
+                @include flexbox();
+                .iconfont{
+                    color:#ff8e55;
+                    font-size: .14rem;
+                    font-weight: normal;
+                }
+                >.iconfont{
+                    width:.2rem;
+                }
+                .color{
+                    color:#ff8e55;
+                    font-size: .18rem;
+                    font-weight: bold;
+                    @include flex();
+                }
+            }
+        }
+    }
+}
+.activetab{
+    background: #81c868;
+}

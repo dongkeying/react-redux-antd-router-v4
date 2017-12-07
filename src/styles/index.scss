@@ -1,0 +1,253 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+@-webkit-keyframes scroll{
+    from {
+        left : 0;
+    }
+    to{
+        left : -400%;
+    }
+}
+* {
+    min-height: 0;
+    min-width: 0;
+}
+.index-wrap{
+    @include flex();
+    overflow-y: scroll;
+    width: 100%;
+    // 轮播图部分
+    .banner{
+        width: 100%;
+        div{
+            width: 100%;
+            overflow: hidden;
+            text-align: center;
+            img{
+                width: 160%;
+                max-width: 150%;
+                margin-left: -25%;
+            }
+            // .slick-dots li button:before{
+
+            //     color: $base-color;
+            // }
+            // .slick-dots{
+            //     bottom:0;
+            //     li{button{
+            //         &::brfore{
+            //         }
+            //     }}
+            // }
+        }
+    }
+    //logo部分
+    .logo{
+        height: 1.58rem;
+        padding: .1rem 0 0;
+        .logo-item{
+            width: 100%;
+            @include clearfix();
+            li{
+                width: 25%;
+                float: left;
+                text-align: center;
+                padding:.04rem;
+                p{
+                    width: .42rem;
+                    height: .42rem;
+                    background: #000;
+                    margin:0 auto;
+                    @include border-radius(.21rem);
+                    line-height: .42rem;
+                    text-align: center;
+                    i{
+                        font-size: .22rem;
+                    }
+                }
+                h6{
+                    height: .2rem;
+                    margin-top: .04rem;
+                    line-height: .2rem;
+                    color:#757575;
+                    font-size: .13rem;
+                }
+            }
+        }
+    }
+    // tab切换部分
+    .tab{
+        background: #f5f5f5;
+        padding:.1rem;
+        .tab-wrap{
+            background: #fff;
+            .ant-tabs-nav{
+                width: 100%;
+                @include flexbox();
+                .ant-tabs-tab{
+                    @include flex();
+                    margin-right: 0;
+                }
+            }
+            .tab-wrap{
+                width: 100%;
+                .tab-item{
+                    @include flexbox();
+                    width: 100%;
+                    height: .99rem;
+                    img{
+                        width:1.21rem;
+                        height: .77rem;
+                        background: pink;
+                        margin-right:.2rem;
+                    }
+                    .tab-right{
+                        @include flex();
+                        @include flexbox();
+                        height: .77rem;
+                        @include flex-direction(column);
+                        .content{
+                            @include flex();
+                            width:100%;
+                            height: .46rem;
+                            color: #000;
+                            font-size: .14rem;
+                            overflow: hidden;
+                            padding-bottom: 0.05rem;
+                            margin: .06rem 0;
+                            .info{
+                                color:#666;
+                                display: inline-block;
+                                border:1px solid #666;
+                                padding:.01rem;
+                                border-radius: 5px;
+                                font-size: .12rem;
+                                margin-right: .07rem;
+                            }
+                        }
+                        .content-bottom{
+                            height: .18rem;
+                            font-size: .12rem;
+                            span{
+                                color:$base-color;
+                                margin-right: .1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 热门推荐部分
+    .hot-recom{
+        padding-top:.2rem;
+        background: #f5f5f5;
+        .great{
+            height: .45rem;
+            text-align: center;
+            position: relative;
+            span{
+                position: relative;
+                z-index:1;
+                display: inline-block;
+                width: .4rem;
+                height: .4rem;            
+                background: $base-color;
+                border-radius: 50%;
+                line-height: .4rem;
+                text-align: center;
+                i{
+                    font-size: .22rem;
+                }
+            }
+            h4{
+                position: relative;
+                z-index:1;
+                background: #f5f5f5;
+                font-size: .2rem;
+                font-weight: bold;
+                display: inline;
+                padding: 0 .1rem;
+            }
+            &::after{
+                content : '';
+                display:block;
+                position: absolute;
+                top:.22rem;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: #e2e2e2;
+                z-index:0;
+            }
+        }
+        .slick-wrap{
+            width: 100%;
+            div {
+                width: 90%;
+                overflow: hidden;
+                text-align: center;
+                margin:0 auto;
+                img {
+                    width: 120%;
+                    max-width: 150%;
+                    margin-left: -35%;
+                }
+                &.slick-list{
+                    width: 88%;
+                }
+                .slick-arrow{
+                    width:.2rem;
+                    text-align: left;
+                    overflow: auto;
+                    color:blue;
+                }
+                .slick-prev{
+                    left:0;
+                }
+                .slick-next{
+                    right:0;
+                }
+                .slick-prev,
+                .slick-next{
+                    &::before{
+                        color:#3f95f3;
+                        font-size: .2rem;
+                    }
+                }
+            }
+        }
+    }
+    //公共部分
+    .common{
+        @include flexbox();
+        padding:.27rem .18rem .16rem;
+        h4{
+            font-size: .17rem;
+            border-left:3px solid;
+            border-color: $base-color;
+            font-weight: bold;
+            padding-left: .07rem;
+            @include flex();
+        }
+        .more{
+            width:.48rem;
+            font-size: .14rem;
+            i{
+                color: $base-color;
+                margin-left: .04rem;
+            }
+        }
+    }
+    // 瑜伽老师
+    .teacher{
+        .teacher-item{
+            .item{
+                img{
+                    width:80%;
+                }
+            }
+        }
+    }
+}

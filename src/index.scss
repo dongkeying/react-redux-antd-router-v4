@@ -1,0 +1,21 @@
+//样式重置
+@import '../yo/core/reset.scss';
+@import './styles/common.scss';
+
+//首页样式
+@import './styles/index.scss';
+@import './styles/course.scss';
+@import './styles/news.scss';
+@import './styles/mine.scss';
+
+//瑜课堂样式
+@import './pages/index/class/class.scss';
+
+//详情页样式
+@import './pages/index/detail/index.scss';
+
+//antd-mobild
+@import '../node_modules/antd-mobile/dist/antd-mobile.css';
+
+//购物车样式
+@import './pages/index/detail/cart.scss';

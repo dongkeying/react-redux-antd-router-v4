@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url('./images/iconfont/iconfont.ttf');
+    // src: url('iconfont.eot?#iefix') format('embedded-opentype'), url('iconfont.woff') format('woff'), url('iconfont.ttf') format('truetype'), url('iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    color:#fff;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+$base-color : #4dc060;
+body,
+html,
+#root,
+.wrap{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+.wrap{
+    @include flexbox();
+    @include flex-direction(column);
+    // 头部logo部分
+    .title{
+        height: .44rem;
+        background: #333949;
+        @include flexbox();
+        h3{
+            color: #333949;
+            @include flex();
+            img{
+                height: .24rem;
+                margin: .1rem .1rem;
+            }
+        }
+        ul.info {
+            width: 1.2rem;
+            @include flexbox();          
+            line-height: .44rem;
+            li{
+                @include flex();
+                text-align: center;
+            }
+        }
+    }
+    .tab-bar{
+        @include flex();
+        @include flexbox();
+        @include flex-direction(column);
+        width: 100%;
+    }
+    //底部Tab切换
+    .footer{
+        height: .51rem;
+        box-shadow: 0 -4px 15px #eee;
+        @include flexbox();
+        li{
+            @include flex();
+            @include flexbox();
+            @include flex-direction(column);
+            text-align: center;
+            width: 100%;
+            padding-top: .04rem;
+            a{
+                color: #333333;
+                @include flex();
+                width: 100%;
+            }
+            .iconfont{
+                color: #333333;
+                @include flex();
+                width: 100%;
+                font-size: .20rem;
+                line-height: .24rem;
+            }
+        }
+    }
+}
+// 滚动消息提醒部分
+.notice {
+    height: .4rem;
+    width: 100%;
+    padding: 0 .05rem 0 .15rem;
+    line-height: .4rem;
+    @include flexbox();
+    .iconfont {
+        font-size: .16rem;
+        color: $base-color;
+        margin-right: .05rem;
+        &.close {
+            font-size: .26rem;
+            text-align: right;
+            margin-left: .03rem;
+            margin-right: 0;
+        }
+    }
+    .queen {
+        @include flex();
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        height: .4rem;
+        ul {
+            padding: 0 .1rem;
+            height: 100%;
+            width: 600%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            clear: both;
+            animation: scroll 30000ms linear 500ms infinite;
+            li {
+                font-size: .12rem;
+                float: left;
+                margin-right: 1.2rem;
+                color: $base-color;
+            }
+        }
+    }
+}

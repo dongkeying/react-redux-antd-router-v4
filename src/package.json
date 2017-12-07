@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "fetch-jsonp": "^1.1.3"
+  }
+}

@@ -1,0 +1,133 @@
+.header{
+    height: .45rem;
+    background-color: #333949;
+    @include flexbox();
+    width:100%;
+    line-height: .47rem;
+    padding-left: .06rem;
+    .ico{
+        width: .4rem;
+        height: .4rem;
+        margin: 0 .02rem;
+        .iconfont{
+            font-size: .23rem;
+        }
+    }
+    div{
+        @include flex();
+        @include flexbox();
+        width:100%;
+        h3{
+            @include flex();
+            color:#fff;
+            text-align: center;
+            font-size: .18rem;
+        }
+        .ico{
+            width: .4rem;
+            height: .4rem;
+            margin: 0 .02rem;
+            .iconfont {
+                font-size: .23rem;
+            }
+        }
+    }
+}
+.cart-wrap{
+    width: 100%;
+    height: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    .footer{
+        height: .45rem;
+        background-color: #fff;
+        @include flexbox();
+        width:100%;
+        line-height: .47rem;
+        .ques{
+            width: .6rem;
+            @include flexbox();
+            @include flex-direction(column);
+            line-height: .2rem;
+            text-align: center;
+            .iconfont{
+                color: #666;
+                font-size: .14rem;
+            }
+        }
+        .add-cart,
+        .buy{
+            @include flex();
+            line-height: .45rem;
+            font-size: .16rem;
+            text-align: center;
+            color: #fff;
+        }
+        .add-cart{
+            background: #333949;
+        }
+        .buy{
+            background: $base-color;
+        }
+    }
+    .content{
+        @include flex();
+        width: 100%;
+        overflow-y: scroll;
+        img{
+            width: 100%;
+        }
+        >h2{
+            margin-top: .06rem;
+            font-size: .24rem;
+            font-weight: bold;
+            padding:.05rem .1rem;
+        }
+        .class-detail{
+            padding:.15rem .1rem;
+            p{
+                font-size: .14rem;
+                color:#222;
+                margin:.04rem 0;
+            }
+            .study{
+                strong{
+                    color:$base-color;
+                    font-weight: bold;
+                    font-size: .2rem;
+                }
+                span{
+                    text-decoration: line-through;
+                    font-size: .14rem;
+                    color: #666;
+                }
+            }
+            .time{
+                strong{
+                    font-size: .14rem;
+                    font-weight: bold;
+                }
+            }
+        }
+        .coupon{
+            @include flexbox();
+            padding:.05rem .1rem;
+            width:100%;
+            p{
+                @include flexbox();
+                @include flex-direction(column);
+                color:#999;
+                text-align: center;
+                .iconfont{
+                    font-size: .18rem;
+                    color: $base-color;
+                }
+                margin:.04rem 0;
+            }
+            .get{
+                width:.93rem;
+                height: 1rem;
+            }
+        }
+    }
+}

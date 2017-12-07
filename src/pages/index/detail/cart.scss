@@ -1,0 +1,91 @@
+.cart-wrap-detail{
+    @include flexbox();
+    height: 100%;
+    @include flex-direction(column);
+    width: 100%;
+    .cart-list{
+        @include flex();
+        width: 100%;
+        overflow-y: scroll;
+        .img-parent{
+            height: .74rem;
+            width: 100%;
+            @include flexbox();
+            padding:.1rem 0;
+            img{
+                width: .8rem;
+                height: .5rem;
+            }
+            .cart-right{
+                @include flex();
+                @include flexbox();
+                @include flex-direction(column);
+                width: 100%;
+                padding-left: .1rem;
+                h4{
+                    height: .24rem;
+                    font-size: .15rem;
+                    line-height: .2rem;
+                    color: #000;
+                    @include ellipsis();
+                }
+                .userful{
+                    color: #666;
+                    font-size: .12rem;
+                }
+                .class-price{
+                    @include flexbox();
+                    line-height: .4rem;
+                    i{
+                        width: .3rem;
+                        color: #666;
+                        display: inline-block;
+                        font-size: .14rem;
+                    }
+                    span{
+                        @include flex();
+                        color: #fa6018;
+                        font-size: .16rem;
+                    }
+                }
+            }
+            
+        }
+    }
+    .footer-cart{
+        height: .45rem;
+        @include border(1px);
+        .am-list-item .am-list-line .am-list-content,
+        .am-list-item .am-list-line {
+            padding:0;
+        }
+        .goto-buy{
+            @include flexbox();
+            line-height: .5rem;
+            h3{
+                font-size: .14rem;
+                @include flex();
+            }
+            p{
+                width: 1.32rem;
+                i{
+                    color:rgb(255, 139, 88);
+                    font-size: .16rem;
+                }
+                a{
+                    margin-left: .1rem;
+                    display: inline-block;
+                    width: 1.12rem;
+                    height: .58rem;
+                    background: rgb(255, 139, 88);
+                    color: #fff;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .am-checkbox.am-checkbox-checked .am-checkbox-inner{
+        background: #fa6018;
+        border-color:#fa6018;
+    }
+}

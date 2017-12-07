@@ -1,0 +1,50 @@
+[
+    {
+        "title": "瑜课堂",
+        "logo": "&#xe65f;",
+        "color": "#cd54b2",
+        "route": "/class"
+    },
+    {
+        "title": "知识",
+        "logo": "&#xe632;",
+        "color": "#69ba78",
+        "route": "/knowledge"
+    },
+    {
+        "title": "品说",
+        "logo": "&#xe60c;",
+        "color": "#cd54b2",
+        "route": "/speak"
+    },
+    {
+        "title": "名师",
+        "logo": "&#xe60a;",
+        "color": "#f27c7c",
+        "route": "/teacher"
+    },
+    {
+        "title": "会馆",
+        "logo": "&#xe746;",
+        "color": "#ed9ad2",
+        "route": "/address"
+    },
+    {
+        "title": "大会",
+        "logo": "&#xe65f;",
+        "color": "#8dc6e1",
+        "route": "/metting"
+    },
+    {
+        "title": "工作坊",
+        "logo": "&#xe65d;",
+        "color": "#f78e71",
+        "route": "/work"
+    },
+    {
+        "title": "国际瑜伽日",
+        "logo": "&#xe667;",
+        "color": "#9c96e0",
+        "route": "/internal"
+    }
+]
