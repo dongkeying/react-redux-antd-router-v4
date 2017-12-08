@@ -11,7 +11,7 @@ class Header extends Component {
     render() {
         return ( 
             <header className="title">
-                <h3><img src={require('../../images/logo.png')} alt="瑜伽网" />瑜伽网</h3>
+                <h3>瑜伽园</h3>
                 <ul className="info">
                     <li onClick={this.goto}>
                         <i className="iconfont">&#xe6ac;</i>

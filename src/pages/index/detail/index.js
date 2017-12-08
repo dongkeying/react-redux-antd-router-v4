@@ -29,6 +29,7 @@ class Cart extends Component {
         }
     }
     addGood(item){
+        console.log(item);
         let state = this.props.cart;
         if (state.length > 0){
             const flag = state.filter((ele) => {

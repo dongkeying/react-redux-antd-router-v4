@@ -1,19 +1,20 @@
 import React,{Component} from 'react';
-import { List, Checkbox } from 'antd-mobile';
+import {connect} from 'react-redux';
+import { Checkbox } from 'antd-mobile';
 
 const CheckboxItem = Checkbox.CheckboxItem;
 class Footer extends Component {
     render() {
         return ( 
             <div className="footer-cart">
-                <CheckboxItem onChange={this.props.onChange}>
+                <CheckboxItem onChange={this.props.onActive}>
                     <div className="goto-buy">
                         <h3>全选</h3>
                         <p>
-                            <i>$0</i>
+                            <i>${this.props.data ? this.props.data.totalPrice : 0}</i>
                             <a href={"javascript:;"}>
                             结算
-                            (<span>0</span>)
+                            (<span>{this.props.data ? this.props.data.totalCount : 0}</span>)
                             </a>
                         </p>
                     </div>
@@ -22,4 +23,10 @@ class Footer extends Component {
         )
     }
 }
-export default Footer;
+export default connect(
+    (state) => {
+        return {
+            data: state.calcTotalPrice.data
+        }
+    }
+)(Footer);
