@@ -64,13 +64,16 @@
             line-height: .5rem;
             h3{
                 font-size: .14rem;
-                @include flex();
+                width: .3rem;
             }
             p{
-                width: 1.62rem;
+                @include flex();
+                @include flexbox();
                 i{
                     color:rgb(255, 139, 88);
                     font-size: .16rem;
+                    @include flex();
+                    text-align:right;
                 }
                 a{
                     margin-left: .1rem;

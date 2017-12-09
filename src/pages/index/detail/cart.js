@@ -12,33 +12,57 @@ class Cart extends Component {
     constructor(){
         super();
         this.state = {
-            allChecked : false,
+            arrCheckedId : [],
+            isChecked:false,
             allPrice : 0
         }
     }
     onChange = (val) => {
         if(val){ // 点击单个商品
-            console.log(val);
-            this.setState((prevState) => {
-                return {
-                    allChecked: false
+            //存储id数组
+            let arrId = this.state.arrCheckedId;
+            if (arrId.includes(val.id)){  //取消选中
+                //删除指定id为val.id的一项
+                let index = arrId.indexOf(val.id);
+                arrId.splice(index,1); 
+                this.setState({
+                    isChecked:false
+                }) 
+            }else{ // 选中
+                arrId.push(val.id);
+                if(arrId.length === this.props.dataList.length){
+                    this.setState({
+                        isChecked: true
+                    }) 
                 }
+            }
+            this.setState({
+                arrCheckedId: arrId
             })
         }else{  //val是undefined 表明用户点击了全选按钮
+            // this.props.dataList.length表示Store中存储的购物车信息
             if (this.props.dataList.length > 0){
-                let totalData = this.props.dataList.reduce((prev,next) => {
-                    //使用reduce累加结果:  注意state中存储的价格是   $234这样的格式,所以需要去除空格,减掉$符号
-                    return {
-                        totalPrice: prev.totalPrice + next.count * next.minPrice.trim().slice(1).trim(),
-                        totalCount: prev.totalCount + next.count
-                    }
-                }, { totalCount: 0, totalPrice:0})
-                this.props.calcTotalPrice(totalData);
-                this.setState((prevState) => {
-                    return {
-                        allChecked : !prevState.allChecked
-                    }
-                })
+                if (this.state.isChecked){  //取消全选,价格清空
+                    this.props.calcTotalPrice({
+                        totalPrice:0,
+                        totalCount:0
+                    });
+                    this.setState({
+                        isChecked: false
+                    })
+                }else{  //全选,计算价格
+                    let totalData = this.props.dataList.reduce((prev,next) => {
+                        //使用reduce累加结果:  注意state中存储的价格是   $234这样的格式,所以需要去除空格,减掉$符号
+                        return {
+                            totalPrice: prev.totalPrice + next.count * next.minPrice.trim().slice(1).trim(),
+                            totalCount: prev.totalCount + next.count
+                        }
+                    }, { totalCount: 0, totalPrice:0})
+                    this.props.calcTotalPrice(totalData);
+                    this.setState({
+                        isChecked : true
+                    })
+                }
             }else{
                 alert('先去挑选喜欢的产品吧');
             }
@@ -57,7 +81,7 @@ class Cart extends Component {
                         {this.props.dataList.map(item => (
                             <CheckboxItem 
                                 key={item.id} 
-                                checked={this.state.allChecked}
+                                checked={this.state.arrCheckedId.includes(item.id)}
                                 onChange={() => this.onChange(item)}
                             >
                             <div className="img-parent">
@@ -76,7 +100,9 @@ class Cart extends Component {
                     </List>
                 }
                 </div>
-                <Footer onActive={() => this.onChange.call(this)}></Footer>
+                <Footer 
+                Checked={this.state.isChecked}
+                onActive={() => this.onChange.call(this)}></Footer>
             </div>  
         )
     }

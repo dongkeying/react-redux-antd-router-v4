@@ -7,7 +7,10 @@ class Footer extends Component {
     render() {
         return ( 
             <div className="footer-cart">
-                <CheckboxItem onChange={this.props.onActive}>
+                <CheckboxItem 
+                checked={this.props.Checked}
+                onChange={this.props.onActive}
+                >
                     <div className="goto-buy">
                         <h3>全选</h3>
                         <p>
