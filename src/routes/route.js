@@ -4,6 +4,7 @@ import Main from '../containers/Main';
 import Search from '../pages/header/Search';
 import Detail from '../pages/index/detail/index';
 import Cart from '../pages/index/detail/cart';
+import Regis from '../containers/Regis';
 
 //redux
 import { Provider } from 'react-redux';
@@ -22,6 +23,7 @@ class SwitchCom extends Component {
                         <Route path="/detail" component={Detail} />
                         <Route path="/cart" component={Cart} />
                         <Route path="/search" component={Search} />
+                        <Route path="/register" component={Regis} />
                         <Route component={NoMatch} />
                     </Switch>
                 </Router>

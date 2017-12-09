@@ -27,7 +27,7 @@ class Header extends Component {
                                 <i className="iconfont">&#xe60c;</i>
                             </span>
                         </div>
-                    ) : "购物车"
+                    ) : <h3>购物车</h3>
                 }
                 <span className="ico">
                     <i className="iconfont">&#xe6b8;</i>

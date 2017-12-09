@@ -111,7 +111,7 @@ class Cart extends Component {
                 <div className="cart-list">
                 {
                     this.props.dataList.length === 0 ? (
-                        "购物车空空如也~"
+                        <div className="empty-cart">购物车空空如也~ 买点什么吧~</div>
                     ) : 
                     <List>
                         {this.props.dataList.map(item => (

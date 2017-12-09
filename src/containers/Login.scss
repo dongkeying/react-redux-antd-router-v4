@@ -1,0 +1,52 @@
+.login-entry{
+    height: 100%;
+    padding-top: .6rem;
+    background: rgba(0,0,0,.05);
+    h3{
+        font-size: .24rem;
+        font-weight: bold;
+        color:$base-color;
+        text-align: center;
+        margin-bottom: .4rem;
+    }
+    .login{
+        input{
+            display: block;
+            width: 90%;
+            border:0;
+            border-bottom:1px solid;
+            border-color:$base-color;
+            height: .44rem;
+            line-height: .44rem;
+            margin:.2rem auto;
+            text-indent: .15rem;
+            background: rgba(0,0,0,.05);
+        }
+    }
+    .button{
+        @include flexbox();
+        margin-top: .2rem;
+        padding:0 .2rem;
+        span{
+            font-size: .14rem;
+            color: #000;
+        }
+        .register{
+            @include flex();
+        }
+        .forget{
+            width: .7rem;
+        }
+    }
+    .loginup{
+        width: 90%;
+        height: .44rem;
+        background: $base-color;
+        border-radius: 15rem;
+        color: #fff;
+        line-height: .44rem;
+        text-align: center;
+        margin:0 auto;
+        margin-top: 1rem;
+    }
+}

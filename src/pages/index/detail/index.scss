@@ -5,6 +5,15 @@
     width:100%;
     line-height: .47rem;
     padding-left: .06rem;
+    >span{
+        width:.4rem;
+    }
+    h3{
+        @include flex();
+        color:#fff;
+        text-align: center;
+        font-size: .16rem;
+    }
     .ico{
         width: .4rem;
         height: .4rem;

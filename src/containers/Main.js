@@ -8,7 +8,7 @@ import Index from './Index';
 import Course from './Course';
 import News from './News';
 import Mine from './Mine';
-import Class from '../pages/index/class/Index'
+import Class from '../pages/index/class/Index';
 
 class Main extends Component {
     componentDidMount(){
@@ -30,4 +30,5 @@ class Main extends Component {
         )
     }
 }
+
 export default withRouter(Main);
