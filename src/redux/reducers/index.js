@@ -15,7 +15,14 @@ function getVisibleProducts(state = [], action) {
     }
 }
 
-function calcTotalPrice(state={},action) {
+function calcTotalPrice(
+    state={
+        data : {
+            totalPrice: 0,
+            totalCount: 0
+        }
+    },
+    action) {
     switch (action.type) {
         case ACTION_TYPES.COUNT_PRICE: {
             return {

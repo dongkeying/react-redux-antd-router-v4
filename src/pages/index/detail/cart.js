@@ -19,6 +19,10 @@ class Cart extends Component {
     }
     onChange = (val) => {
         if(val){ // 点击单个商品
+            //获取总价格和总数量
+            let storeInfo = this.props.totalInfo.data;
+            let dataItemP = 0;
+            let dataItemC = 0;
             //存储id数组
             let arrId = this.state.arrCheckedId;
             if (arrId.includes(val.id)){  //取消选中
@@ -28,6 +32,12 @@ class Cart extends Component {
                 this.setState({
                     isChecked:false
                 }) 
+                dataItemP = storeInfo.totalPrice - val.count * val.minPrice.trim().slice(1).trim();
+                dataItemC = storeInfo.totalCount - val.count;
+                this.props.calcTotalPrice({
+                    totalPrice: dataItemP,
+                    totalCount: dataItemC
+                });
             }else{ // 选中
                 arrId.push(val.id);
                 if(arrId.length === this.props.dataList.length){
@@ -35,6 +45,13 @@ class Cart extends Component {
                         isChecked: true
                     }) 
                 }
+                //更改价格
+                dataItemP = storeInfo.totalPrice + val.count * val.minPrice.trim().slice(1).trim();
+                dataItemC = storeInfo.totalCount + val.count;
+                this.props.calcTotalPrice({
+                    totalPrice: dataItemP,
+                    totalCount: dataItemC
+                });
             }
             this.setState({
                 arrCheckedId: arrId
@@ -48,7 +65,8 @@ class Cart extends Component {
                         totalCount:0
                     });
                     this.setState({
-                        isChecked: false
+                        isChecked: false,
+                        arrCheckedId:[]
                     })
                 }else{  //全选,计算价格
                     let totalData = this.props.dataList.reduce((prev,next) => {
@@ -58,12 +76,18 @@ class Cart extends Component {
                             totalCount: prev.totalCount + next.count
                         }
                     }, { totalCount: 0, totalPrice:0})
+                    //所有商品都是选中状态
+                    let stateArr = [];
+                    this.props.dataList.forEach((item) => {
+                        stateArr.push(item.id);
+                    })
                     this.props.calcTotalPrice(totalData);
                     this.setState({
-                        isChecked : true
+                        isChecked : true,
+                        arrCheckedId:stateArr
                     })
                 }
-            }else{
+            }else{  //购物车为空状态
                 alert('先去挑选喜欢的产品吧');
             }
         }
@@ -110,7 +134,8 @@ class Cart extends Component {
 export default connect(
     (state) => {
         return {
-            dataList: state.getVisibleProducts
+            dataList: state.getVisibleProducts,
+            totalInfo: state.calcTotalPrice
         }
     },
     (dispatch) => {
