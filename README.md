@@ -20,8 +20,8 @@
 6. 访问`http://localhost:3000`
 
 ## 项目预览
-<img width="50%" src="https://raw.githubusercontent.com/dongkeying/react-redux-antd-router-v4/e1ce4b3a5c45fd38c2a2f7bad29d4e895dd94f18/readme_image/Index.png"/>
-<img width="50%"  src="https://raw.githubusercontent.com/dongkeying/react-redux-antd-router-v4/e1ce4b3a5c45fd38c2a2f7bad29d4e895dd94f18/readme_image/Login.png">
+<img width="30%" src="https://raw.githubusercontent.com/dongkeying/react-redux-antd-router-v4/e1ce4b3a5c45fd38c2a2f7bad29d4e895dd94f18/readme_image/Index.png"/>
+<img width="30%"  src="https://raw.githubusercontent.com/dongkeying/react-redux-antd-router-v4/e1ce4b3a5c45fd38c2a2f7bad29d4e895dd94f18/readme_image/Login.png">
 <img width="50%"  src="https://raw.githubusercontent.com/dongkeying/react-redux-antd-router-v4/e1ce4b3a5c45fd38c2a2f7bad29d4e895dd94f18/readme_image/Register.png">
 <img width="50%"  src="https://raw.githubusercontent.com/dongkeying/react-redux-antd-router-v4/e1ce4b3a5c45fd38c2a2f7bad29d4e895dd94f18/readme_image/Class.png">
 <img width="50%"  src="https://raw.githubusercontent.com/dongkeying/react-redux-antd-router-v4/e1ce4b3a5c45fd38c2a2f7bad29d4e895dd94f18/readme_image/Detail.png">
