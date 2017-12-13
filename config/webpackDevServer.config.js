@@ -99,6 +99,20 @@ module.exports = function(proxy, allowedHost) {
         "pathRewrite" : {
           "^/vip" : ""
         }
+      },
+      "/api": {
+        "target" : "http://localhost:5000",
+        "changeOrigin" : true,  
+        "pathRewrite" : {
+          "^/api" : ""
+        }
+      },
+      "/pos":{
+        "target": "http://m.poco.cn",
+        "changeOrigin": true,
+        "pathRewrite": {
+          "^/pos": ""
+        }
       }
     },
     before(app) {

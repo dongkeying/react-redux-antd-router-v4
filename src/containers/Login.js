@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import {withRouter} from 'react-router-dom';
+import axios from 'axios';
 
 class Login extends Component {
     constructor(props) {
@@ -20,6 +21,22 @@ class Login extends Component {
         //登录验证
         let username = this.textInput.value;
         let password = this.state.password;
+
+        axios({
+            method : "post",
+            url : "/api/users/signIn",
+            data : {
+                username,
+                password
+            }
+        }).then((result) => {
+            if(result.data.success){
+                this.props.history.push('/main');
+                console.log('登陆成功');
+            }else{
+                console.log('用户名或者密码不正确');
+            }
+        })
     }
     valueChange(e){
         //获取密码

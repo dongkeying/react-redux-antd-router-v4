@@ -166,7 +166,7 @@ module.exports = {
           // use the "style" loader inside the async code so CSS from them won't be
           // in the main CSS file.
           {
-            test: /\.(css|sass)$/,
+            test: /\.(css|scss)$/,
             loader: ExtractTextPlugin.extract(
               Object.assign(
                 {
@@ -342,11 +342,9 @@ module.exports = {
     tls: 'empty',
     child_process: 'empty',
   },
-  //配置externals
-  externals : {
-    "react" : "window.React",
-    "react-router-dom" : "window.ReactRouterDom",
-    "react-redux" : "window.ReactRedux",
-    "ant-mobile" : "window.AntMobile"
-  }
+
+  // externals : {
+  //   'react' : 'window.React',
+  //   'react-redux' : 'window.ReactRedux'
+  // }
 };

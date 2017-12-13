@@ -1,22 +1,46 @@
 import React,{Component} from 'react';
 import {withRouter} from 'react-router-dom';
+import axios from 'axios';
 
 class Regis extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            textPassword : "",
-            textUsername : "",
-            textMess : ""
+            
         }
+        this.textPassword ="";        
+        this.textUsername = "";
+        this.textMess = "";       
         this.gotoLog = this.gotoLog.bind(this);
         this.goBack = this.goBack.bind(this);
+        this.signUp = this.signUp.bind(this);
     }
     gotoLog(){
         this.props.history.push('/main/mine');
     }
     goBack(){
         this.props.history.goBack();
+    }
+    //注册
+    signUp(){
+        //收集用户数据
+        const username = this.textUsername.value;
+        const message = this.textMess.value;
+        const password = this.textPassword.value;
+       
+        axios.post('/api/users/signUp',{
+            username,
+            message,
+            password
+        })
+        .then((res) => {
+            if(res.data.success){
+                //注册成功
+                this.props.history.push('/main/mine');
+            }else{  //注册失败
+                console.log('用户名已经被注册,请直接登录~');
+            }
+        })
     }
     render() {
         return ( 
@@ -38,7 +62,7 @@ class Regis extends Component {
                         <input type="text" ref={(input) => { this.textPassword = input; }} placeholder="6-12位数字,英文或字符" />
                     </div>
                 </div>
-                <p className="goto-reg">注册</p>
+                <p className="goto-reg" onClick={this.signUp}>注册</p>
                 <p className="agree">点击注册,表示同意《瑜伽园用户协议》</p>
             </div>
         )
