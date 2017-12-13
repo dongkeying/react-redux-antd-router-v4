@@ -20,12 +20,12 @@
 6. 访问`http://localhost:3000`
 
 ## 项目预览
-![首页](https://raw.githubusercontent.com/dongkeying/react-redux-antd-router-v4/e1ce4b3a5c45fd38c2a2f7bad29d4e895dd94f18/readme_image/Index.png)
-![登录](https://raw.githubusercontent.com/dongkeying/react-redux-antd-router-v4/e1ce4b3a5c45fd38c2a2f7bad29d4e895dd94f18/readme_image/Login.png)
-![注册](https://raw.githubusercontent.com/dongkeying/react-redux-antd-router-v4/e1ce4b3a5c45fd38c2a2f7bad29d4e895dd94f18/readme_image/Register.png)
-![列表页](https://raw.githubusercontent.com/dongkeying/react-redux-antd-router-v4/e1ce4b3a5c45fd38c2a2f7bad29d4e895dd94f18/readme_image/Class.png)
-![详情页](https://raw.githubusercontent.com/dongkeying/react-redux-antd-router-v4/e1ce4b3a5c45fd38c2a2f7bad29d4e895dd94f18/readme_image/Detail.png)
-![购物车页面](https://github.com/dongkeying/react-redux-antd-router-v4/blob/e1ce4b3a5c45fd38c2a2f7bad29d4e895dd94f18/readme_image/Cart.png?raw=true)
+<img width="50%" src="https://raw.githubusercontent.com/dongkeying/react-redux-antd-router-v4/e1ce4b3a5c45fd38c2a2f7bad29d4e895dd94f18/readme_image/Index.png"/>
+<img width="50%"  src="https://raw.githubusercontent.com/dongkeying/react-redux-antd-router-v4/e1ce4b3a5c45fd38c2a2f7bad29d4e895dd94f18/readme_image/Login.png">
+<img width="50%"  src="https://raw.githubusercontent.com/dongkeying/react-redux-antd-router-v4/e1ce4b3a5c45fd38c2a2f7bad29d4e895dd94f18/readme_image/Register.png">
+<img width="50%"  src="https://raw.githubusercontent.com/dongkeying/react-redux-antd-router-v4/e1ce4b3a5c45fd38c2a2f7bad29d4e895dd94f18/readme_image/Class.png">
+<img width="50%"  src="https://raw.githubusercontent.com/dongkeying/react-redux-antd-router-v4/e1ce4b3a5c45fd38c2a2f7bad29d4e895dd94f18/readme_image/Detail.png">
+<img width="50%"  src="https://github.com/dongkeying/react-redux-antd-router-v4/blob/e1ce4b3a5c45fd38c2a2f7bad29d4e895dd94f18/readme_image/Cart.png?raw=true">
 
 ## 开源协议
 MIT
