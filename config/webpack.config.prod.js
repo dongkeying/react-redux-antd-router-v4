@@ -343,8 +343,10 @@ module.exports = {
     child_process: 'empty',
   },
 
-  // externals : {
-  //   'react' : 'window.React',
-  //   'react-redux' : 'window.ReactRedux'
-  // }
+  externals : {
+    'react' : 'window.React',
+    'react-dom' : 'window.ReactDOM',
+    'react-redux' : 'window.ReactRedux',
+    'react-router-dom' : 'window.ReactRouterDOM'
+  }
 };

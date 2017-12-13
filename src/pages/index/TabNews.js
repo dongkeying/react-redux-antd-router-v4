@@ -38,6 +38,9 @@ class TabNews extends Component {
                     dataList : result
                 })
             })
+            .catch((err) => {
+                console.log('err ' + err);
+            })
     }
 }
 export default TabNews;

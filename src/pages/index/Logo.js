@@ -35,6 +35,9 @@ class Logo extends Component {
                     dataList : result
                 })
             })
+            .catch((err) => {
+                console.log('err ' + err);
+            })
     }
 }
 export default withRouter(Logo);
